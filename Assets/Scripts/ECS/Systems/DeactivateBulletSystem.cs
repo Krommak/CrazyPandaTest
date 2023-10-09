@@ -34,15 +34,19 @@ namespace Game.Systems
 
         private void RefreshBullet(Entity entity)
         {
-            var component = entity.GetComponent<Bullet>();
+            ref var component = ref entity.GetComponent<Bullet>();
             var transform = component.Transform;
+            transform.eulerAngles = Vector3.zero;
+            var rigibody = component.Rigidbody;
+            rigibody.velocity = Vector2.zero;
+            rigibody.angularVelocity = 0;
             var mass = component.Mass;
             this.World.RemoveEntity(entity);
             var newEntity = this.World.CreateEntity();
             newEntity.SetComponent(new Bullet()
             {
                 Transform = transform,
-                Velocity = new Vector2(),
+                Rigidbody = rigibody,
                 Mass = mass
             });
             transform.gameObject.SetActive(false);

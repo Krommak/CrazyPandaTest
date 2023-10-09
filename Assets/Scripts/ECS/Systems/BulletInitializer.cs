@@ -42,7 +42,7 @@ namespace Game.Systems
             entity.SetComponent(new Bullet()
             {
                 Transform = go.transform,
-                Velocity = new Vector2(),
+                Rigidbody = go.GetComponent<Rigidbody2D>(),
                 Mass = mass
             });
             go.transform.localScale = new Vector3(mass, mass, mass);

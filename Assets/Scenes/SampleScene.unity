@@ -159,15 +159,7 @@ MonoBehaviour:
   - enabled: 1
     system: {fileID: 11400000, guid: fefe5ad0cadb31f46a8c1c7f0cffbbd5, type: 2}
   - enabled: 1
-    system: {fileID: 11400000, guid: 76694cea188c96a46b485c6ffcf20c76, type: 2}
-  - enabled: 1
-    system: {fileID: 11400000, guid: 1bcf75928b90d874b9626c39bcc0b1e1, type: 2}
-  - enabled: 1
-    system: {fileID: 11400000, guid: 612934377aa91814fb2da2e050b7c144, type: 2}
-  - enabled: 1
     system: {fileID: 11400000, guid: 15a1e32ebc31a97488b8bd8e4b747f35, type: 2}
-  - enabled: 1
-    system: {fileID: 11400000, guid: 97832fe4f28ab5c469ab5eefa644cc72, type: 2}
   fixedUpdateSystems: []
   lateUpdateSystems: []
   cleanupSystems: []
@@ -550,6 +542,8 @@ GameObject:
   - component: {fileID: 1531358272}
   - component: {fileID: 1531358274}
   - component: {fileID: 1531358276}
+  - component: {fileID: 1531358278}
+  - component: {fileID: 1531358279}
   m_Layer: 0
   m_Name: SlowZone
   m_TagString: Untagged
@@ -647,3 +641,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1531358278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531358270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85a96f632fe10f4cbab4212d7813fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeFactor: 0.1
+--- !u!58 &1531358279
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531358270}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

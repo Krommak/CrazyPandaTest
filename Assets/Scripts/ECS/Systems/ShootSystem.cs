@@ -37,10 +37,12 @@ namespace Game.Systems
                     var bullet = _bulletsFilter.First();
                     var position = gunComponent.ShootPosition.position;
                     ref var bulletComponent = ref bullet.GetComponent<Bullet>();
-                    bulletComponent.Velocity = gunComponent.Direction * _startVelocity;
                     var transform = bulletComponent.Transform;
                     transform.position = position;
                     transform.gameObject.SetActive(true);
+                    Debug.Log(gunComponent.Direction * _startVelocity);
+                    bulletComponent.Rigidbody.AddRelativeForce(gunComponent.Direction * _startVelocity);
+                    Debug.Log(bulletComponent.Rigidbody.velocity);
                     bullet.SetComponent(new IsActive());
 
                     gunComponent.Timer = 0;

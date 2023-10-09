@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c2d70ec66379047a04fcbd6a377145, type: 3}
   m_Name: Shoot
   m_EditorClassIdentifier: 
-  _recharge: 2
-  _startVelocity: 10
+  _startVelocity: 1500
