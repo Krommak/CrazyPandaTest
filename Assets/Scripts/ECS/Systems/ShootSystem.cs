@@ -3,8 +3,6 @@ using UnityEngine;
 using Unity.IL2CPP.CompilerServices;
 using Scellecs.Morpeh;
 using Game.Components;
-using System.Collections.Generic;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 namespace Game.Systems
 {
